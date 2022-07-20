@@ -1,4 +1,4 @@
-require('.env').config();
+require('dotenv').config();
 let express = require('express');
 let app = express();
 console.log("Hello World");
