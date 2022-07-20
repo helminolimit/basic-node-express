@@ -1,3 +1,4 @@
+require('dotenv').config()
 let express = require('express');
 let app = express();
 console.log("Hello World");
@@ -14,7 +15,13 @@ app.get("/json", (req, res) => {
     });
 });
 
+var response = "Hello json".toUpperCase(); //HELLO JSON
 
+if (process.env.VAR_NAME === "allCaps"){
+    response = "Hello json".toUpperCase();
+} else {
+    response = "Hello json";
+}
 
 
 
